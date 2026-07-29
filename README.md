@@ -1,72 +1,123 @@
-# Meta: Back-End Developer Capstone
+# Meta Back-End Developer Capstone
 
-▷ This is the final assignment of the Meta Backend Developer Professional Certificate on Coursera
+## Overview
 
-Throughout this project, I've explored various aspects of back-end development, including database management, API design, authentication, and optimization. By tackling real-world challenges and implementing industry best practices, I've honed my abilities to architect and deploy back-end solutions that meet the needs of modern applications.
+This project is the final capstone for the **Meta Back-End Developer Professional Certificate** on Coursera.
 
-Thanks for taking the time to review this project! My hope is that it sparks inspiration and provides helpful guidance for other aspiring back-end developers as they navigate their own paths in the exciting world of software development.
+The application is built using **Django** and **Django REST Framework** and provides REST APIs for managing restaurant menu items and table bookings. It also includes user authentication, MySQL database integration, and unit tests.
 
-## Content Guide 🗺️
+---
 
-▷ Feel free to navigate around using the content button located in the top right corner—it's a breeze for moving through the content.
+## Technologies Used
 
-## API Endpoints testing 🔄 
+- Python
+- Django
+- Django REST Framework
+- MySQL
+- Djoser Authentication
+- Token Authentication
+- Git & GitHub
 
-▷ The API app comes with a total of 4 endpoints, plus you'll find Djoser endpoints ready to use as well.
+---
 
-- Check out all the menu items or craft a unique addition
+## Features
+
+- User registration and authentication
+- Menu Management API
+- Table Booking API
+- Django Admin Panel
+- MySQL Database
+- RESTful API implementation
+- Unit Tests
+- Insomnia/Postman compatible
+
+---
+
+# API Endpoints
+
+## Authentication
+
 ```
-http://127.0.0.1:8000/api/menu/items
-```
-
-| Method | Action                  | TOKEN AUTH | STATUS CODE |
-|--------|-------------------------|------------|-------------|
-| GET    | Retrieve all menu items | No         | 200         |
-| POST   | Create a menu item      | No         | 201         |
-
-- Discover, update, partially modify, or bid farewell to that special dish
-```
-http://127.0.0.1:8000/api/menu/items/{itemId}
-```
-
-| Method | Action                           | TOKEN AUTH | STATUS CODE |
-|--------|----------------------------------|------------|-------------|
-| GET    | Retrieves the menu item details  | No         | 200         |
-| PUT    | Update the menu item             | No         | 200         |
-| PATCH  | Partially update the menu item   | No         | 200         |
-| DELETE | Delete the menu item             | No         | 200         |
-
-- Explore, update, partially adjust, or remove that special table
-```
-http://127.0.0.1:8000/api/booking/tables
-```
-
-| Method | Action                 | TOKEN AUTH | STATUS CODE |
-|--------|------------------------|------------|-------------|
-| GET    | Retrieve all bookings  | Yes        | 200         |
-| POST   | Create a booking       | Yes        | 201         |
-
-- Check it out, update, partially modify, or bid farewell to that one special table
-```
-http://127.0.0.1:8000/api/booking/tables/{bookingId}
+POST /auth/users/
+POST /auth/token/login/
+POST /auth/token/logout/
 ```
 
-| Method | Action                        | TOKEN AUTH | STATUS CODE |
-|--------|-------------------------------|------------|-------------|
-| GET    | Retrieve the booking details  | Yes        | 200         |
-| PUT    | Update the booking            | Yes        | 200         |
-| PATCH  | Partially update the booking  | Yes        | 200         |
-| DELETE | Delete the booking            | Yes        | 200         |
+---
 
-## Peer review 🧐
+## Menu API
 
-▷ I've got a couple of folks looking over my code, and before they grade it, they're checking out things like:
+```
+GET    /api/menu/items/
+POST   /api/menu/items/
 
-- Did I use Django to dish out those web pages?
-- Did I stash Ir project in a Git repo?
-- Does Ir app link up the backend with MySQL?
-- Did I hook up those menu and table booking APIs?
-- Have I set things up so folks can sign up and log in?
-- Did I write some unit tests for your app?
-- And can someone fire up Insomnia and give your API a spin?
+GET    /api/menu/items/<id>/
+PUT    /api/menu/items/<id>/
+PATCH  /api/menu/items/<id>/
+DELETE /api/menu/items/<id>/
+```
 
+---
+
+## Booking API
+
+```
+GET    /api/booking/tables/
+POST   /api/booking/tables/
+
+GET    /api/booking/tables/<id>/
+PUT    /api/booking/tables/<id>/
+PATCH  /api/booking/tables/<id>/
+DELETE /api/booking/tables/<id>/
+```
+
+---
+
+## Running the Project
+
+Clone the repository
+
+```bash
+git clone https://github.com/Rishav9142/LittleLemon-Backend-Capstone.git
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run migrations
+
+```bash
+python manage.py migrate
+```
+
+Start the development server
+
+```bash
+python manage.py runserver
+```
+
+---
+
+## Peer Review
+
+The project satisfies the following requirements:
+
+- Django serves web pages
+- Git version control
+- MySQL database integration
+- Menu API
+- Table Booking API
+- User Registration & Authentication
+- Unit Tests
+- API can be tested using Insomnia or Postman
+
+---
+
+## Repository
+
+GitHub Repository:
+
+https://github.com/Rishav9142/LittleLemon-Backend-Capstone
